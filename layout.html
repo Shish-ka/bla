@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ $title ?? 'default'}}</title>
+    @vite('resources/css/app.css')
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="flex flex-col h-screen">
+
+    <header class="flex justify-between items-center px-6 py-2 bg-blue-600 text-blue-100">
+        <a href="{{ route('home') }}" class="hover:text-blue-300">Home</a>
+
+        <nav class="flex gap-x-4">
+            <a href="{{ route('register') }}" class="hover:text-blue-300">Register</x-link>
+
+            <a href="{{ route('login') }}" class="hover:text-blue-300">Login</x-link>
+           
+            <a href="{{ route('logout') }}" class="hover:text-blue-300">Logout</x-link>
+        </nav>
+    </header>
+
+    <main class="flex-grow">
+        {{ $slot }}
+    </main>
+
+    <footer class="text-center">
+        <p>&copy; date('Y')</p>
+    </footer>
+</body>
+</html>
