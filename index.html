@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    
+    <title>Home</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    @vite('resources/css/app.css')
 </head>
 <body class="flex flex-col h-screen">
-
-    <header class="flex justify-between items-center px-6 py-2 bg-blue-600 text-blue-100">
-        <a href="" class="hover:text-blue-300">Home</a>
+    <header class="flex justify-between bg-blue-500 p-2">
+        <a href="{{ route('home') }}" class="text-white hover:text-blue-200">Home</a>
 
         <nav class="flex gap-x-4">
-            <a href="" class="hover:text-blue-300">Register</x-link>
+            <a href="{{ route('register') }}" class="text-white hover:text-blue-200">Register</a>
 
-            <a href="" class="hover:text-blue-300">Login</x-link>
+            <a href="{{ route('login') }}" class="text-white hover:text-blue-200">Login</a>
            
-            <a href="" class="hover:text-blue-300">Logout</x-link>
+            <a href="" class="text-white hover:text-blue-200">Logout</a>
         </nav>
     </header>
 
-    <main class="flex-grow">
-        fhh
+    <main class="h-full p-2 text-3xl font-bold">
+        <p>Home</p> 
     </main>
 
-    <footer class="text-center">
+    <footer class="bg-blue-500 text-white text-center p-2">
         <p>&copy; date('Y')</p>
     </footer>
 </body>
